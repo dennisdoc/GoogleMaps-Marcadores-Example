@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="A front-end template that helps you build fast, modern mobile web apps." name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+    <title>Sale App</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta content="yes" name="mobile-web-app-capable">
+    <link href="images/app.png" sizes="192x192" rel="icon">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="Material Design Lite" name="apple-mobile-web-app-title">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta content="#3372DF" name="msapplication-TileColor">
+	
+	<!-- Angular -->
+	<script type="text/javascript" src="resources/bower_components/lodash/lodash.min.js"></script>
+	<script src='resources/bower_components/angular/angular.min.js'></script>
+	<script src="resources/bower_components/jquery/dist/jquery.js"></script>
+	<script src="resources/bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="resources/bower_components/angular-route/angular-route.js"></script>
+	<script src="resources/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="resources/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="resources/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	
+    <link rel="stylesheet" href="resources/material-layout/material.indigo-blue.min.css"> 
+	<script src="resources/material-layout/material.indigo.js" ></script>
+
+   	<link rel="stylesheet" href="resources/bower_components/mdi/css/materialdesignicons.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="cssin/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="cssin/style.css"/>
+	<link rel="stylesheet" href="resources/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="resources/bower_components/font-awesome/css/font-awesome.min.css">
+    
+    <!-- bootstrap-material -->
+    <link rel="stylesheet" href="resources/bower_components/bootstrap-material-design-master/dist/css/material.min.css">
+	<script src="resources/bower_components/bootstrap-material-design-master/dist/js/material.js"></script>
+	<script src="resources/bower_components/bootstrap-material-design-master/dist/js/ripples.js"></script>
+    <link rel="stylesheet" href="resources/bower_components/bootstrap-material-design-master/dist/css/material-fullpalette.min.css">     
+	
+	<!-- material -->
+	<link rel="stylesheet" href="resources/bower_components/material/style.css">
+	<script src="resources/bower_components/material/js/material.js"></script>
+	<script src="resources/bower_components/material/js/modules/carousel.js"></script>
+	<script src="resources/bower_components/material/js/modules/navigation.js"></script>
+	<script src="resources/bower_components/material/js/modules/tabs.js"></script>
+	
+	<!-- cordova -->
+	<script src="resources/bower_components/ngCordova/dist/ng-cordova.min.js"></script>
+<!-- 	<script src="resources/bower_components/cordova/cordova.android.js"></script> -->
+	
+	<!-- google maps api -->
+	<script type="text/javascript" src="resources/bower_components/angular-simple-logger/dist/index.js"></script>
+	<script type="text/javascript" src="resources/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js"></script>
+	<script type="text/javascript" src="resources/bower_components/ngmap/build/scripts/ng-map.min.js"></script> 
+	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js"></script>
+	
+	<!-- App -->
+	<script type="text/javascript" src="js/view/route/route.js"></script> 
+	<script type="text/javascript" src="js/app.js"></script> 
+	
+	<!-- login script -->
+	<script type="text/javascript" src="js/controller/loginController.js"></script> 
+	
+	<!-- map script -->
+	<script type="text/javascript" src="js/controller/mapController.js"></script> 
+	
+	<!-- canvas Loading -->
+    <script src="js/loading.js"></script>
+	
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body ng-app="layout" onload="onLoad()" >
+  	<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--white mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Home</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="mdi-action-search" style="margin-top: 7px;"></i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search" />
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+          </div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+            <i class="mdi-navigation-more-vert"></i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+            <li class="mdl-menu__item">About</li>
+            <li class="mdl-menu__item">Contact</li>
+            <li class="mdl-menu__item">Legal information</li>
+          </ul>
+        </div>
+      </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <span class="mdi mdi-account profile"></span>
+          <div class="demo-avatar-dropdown">
+            <span ng-bind="session.data | json" ></span>
+            <div class="mdl-layout-spacer"></div>
+          </div>
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="#/"><i class="mdi-action-home layout-icon"></i>Home</a>
+          <a class="mdl-navigation__link" href="#/login"><i class="mdi-action-account-circle layout-icon" ></i>Login</a>
+          <div class="mdl-layout-spacer"></div>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+      	<div ng-view></div>
+     </main>
+     <loading id="loading" ng-controller="canvasLoad" >
+     	<div ng-include="'./loading.html'" onload="init();animloop();reset();" ></div>
+     </loading>
+ </html>

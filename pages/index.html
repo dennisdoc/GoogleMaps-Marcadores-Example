@@ -1,0 +1,15 @@
+
+	<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Edição Mapa</button>
+	<button type="button" class="btn btn-default" onclick="goFullScreen();">Go Fullscreen</button>
+	<hr>
+	<div collapse="isCollapsed">
+		<div class="overlay-edicaoMapa" >
+			<ng-include src="'./pages/canvas/edicaoMapa.html'"></ng-include>
+		</div> 
+	</div>
+	
+	<canvas ng-mouseup="setClicked(false);canvasClick($event);" ng-mousemove="canvasClick($event)" 
+		  	ng-mousedown="setClicked(true);canvasClick($event)"  id="canvas" class="canvas-game"
+		  	ng-right-click="rightClick($event)" >Not Supported</canvas>
+
+			

@@ -1,0 +1,33 @@
+{
+  "name": "logger",
+  "main": "logger.js",
+  "version": "2.0.0",
+  "authors": [
+    "TélécomSanté <tech@telecomsante.com>"
+  ],
+  "description": "A multipurpose logger, for logging whats loggable, suitable for log addicts and others",
+  "keywords": [
+    "logger",
+    "log",
+    "loger"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/telecomsante/logger",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "a2bb4c9e5d80e68d7f7331d9c53be68359de1514"
+  },
+  "_source": "git://github.com/jokesterfr/logger.git",
+  "_target": "~2.0.0",
+  "_originalSource": "logger",
+  "_direct": true
+}

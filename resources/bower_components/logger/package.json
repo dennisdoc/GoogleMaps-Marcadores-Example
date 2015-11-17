@@ -1,0 +1,33 @@
+{
+  "name": "logger",
+  "version": "2.0.0",
+  "description": "Logger tools",
+  "author": "Telecom Santé <tech@telecomsante.com>",
+  "license": "© Télecom Santé 2014",
+  "contributors": [
+    {
+      "name": "Fabien Giffard",
+      "email": "fabien.giffard@telecomsante.com"
+    },
+    {
+      "name": "Clément Désiles",
+      "email": "clement.desiles@telecomsante.com"
+    },
+    {
+       "name": "Fabrice Le Coz",
+       "email": "fabrice.lecoz@telecomsante.com"
+    }
+  ],
+  "preferGlobal": false,
+  "main": "logger.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokesterfr/logger.git"
+  },
+  "dependencies": {
+    "cli-color": "0.3.2"
+  },
+  "engine": {
+    "node": ">=0.10.0"
+  }
+}
